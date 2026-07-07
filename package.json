@@ -1,19 +1,18 @@
 {
-  "dependencies": {
-    "clean-css": "^5.3.3",
-    "cleanjs": "^1.0.1",
-    "uglify-js": "^3.19.3"
+  "name": "bleepr",
+  "version": "1.1.0",
+  "description": "sound effect generator for UI, games, and transitions",
+  "main": "./cli.js",
+  "bin": {
+    "bleepr": "cli.js"
   },
-  "name": "bfxr2",
-  "version": "1.0.4",
-  "description": "sound effect generator (Bfxr.net)",
-  "main": "compile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cli": "node cli.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/increpare/bfxr2.git"
+    "url": "git+https://github.com/irislgtm/bleepr.git"
   },
   "keywords": [
     "bfxr2",
@@ -23,10 +22,10 @@
     "effects",
     "audio"
   ],
-  "author": "increpare",
+  "author": "irislgtm",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/increpare/bfxr2/issues"
+    "url": "https://github.com/irislgtm/bleepr/issues"
   },
-  "homepage": "https://github.com/increpare/bfxr2#readme"
+  "homepage": "https://github.com/irislgtm/bleepr#readme"
 }

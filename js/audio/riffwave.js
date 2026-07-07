@@ -128,5 +128,3 @@ function MakeRiff ( sampleRate, bitsPerSample,data) {
 }
 
 
-if (typeof exports != 'undefined')  // For node.js
-  exports.RIFFWAVE = RIFFWAVE;
