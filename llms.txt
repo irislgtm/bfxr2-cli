@@ -1,0 +1,34 @@
+# bleepr
+
+Sound effect generator CLI for UI, games, and transitions. Generates WAV files from templates or randomized params using three synth engines: bfxr (chiptune), footsteppr (footsteps), and transfxr (whooshes).
+
+## Entry point
+
+cli.js — single-file Node.js CLI, no build step. Run directly: `node cli.js`
+
+## Key files
+
+- cli.js : CLI entry point, arg parsing, banner, generation pipeline
+- js/synths/SynthBase.js : base class for all synths (params, templates)
+- js/synths/Bfxr.js : main chiptune synth with hardcoded templates
+- js/synths/Footsteppr.js : footstep sound synth
+- js/synths/Transfxr.js : filter-sweep transition synth for UI whooshes
+- js/audio/Bfxr_DSP.js : core DSP generator for Bfxr sounds
+- js/audio/puredata.js : Pure Data signal processing primitives
+- js/audio/riffwave.js : WAV file writing
+
+## Template system
+
+Templates are either:
+- Hardcoded as `generate_<name>()` methods on a synth class (e.g. Bfxr.generate_pickup_coin)
+- Loaded from `.bcol` JSON files in `templates/<Synth>/` via insert_templates.js
+
+## CLI flags
+
+-h (help), -l (list templates), -a (about template), -s (synth), -o (output),
+--random, --seed, -p (params string), -f (param file), --dump-params
+
+## No framework
+
+Zero dependencies for the CLI core. Uses Node.js built-ins only.
+ANSIs for color. The old web UI (bin/, css/, img/, compile.js) was stripped.
